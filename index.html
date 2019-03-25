@@ -31,6 +31,10 @@
         font-weight: 500;
       }
 
+      #examples p {
+        text-align: end;
+      }
+
       #authors img {
         display: block;
         width: 150px;
@@ -73,8 +77,8 @@
       From extensive experiments, we also propose two novel components that help improve audio captioning performance: the top-down multi-scale encoder and aligned semantic attention.
       </p>
     </div>
-    <div class="container mb-5">
-      <div id="examples" class="row">
+    <div id="examples" class="container mb-5">
+      <div class="row">
         <div class="col-sm">
           <div class="btn-group d-flex" role="group">
           <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(0)">replay</button>
@@ -109,6 +113,7 @@
           <div id='reference_player_2'></div>
         </div> <!-- end of col-sm -->
       </div> <!-- end of row -->
+      <p><a href="/supp.html">More examples</a></p>
     </div> <!-- end of container -->
     <!-- Todo update authors link -->
     <div id="authors" class="container mb-5">

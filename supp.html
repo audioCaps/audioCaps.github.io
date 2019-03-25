@@ -53,7 +53,7 @@
     iframe {
       width: 100%;
       height: 200px;
-      display: block;
+      display: none;
       position: relative;
     }
     </style>
@@ -83,189 +83,141 @@
       <div class="row mb-5">
         <div class="col-sm">
           <div class="btn-group d-flex" role="group">
-          <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[0]()">replay</button>
-          <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[0]()">play_arrow</button>
-          <button type="button" class="btn btn-sm btn-danger  material-icons w-100" onclick="ref_pauseFunction[0]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(0)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(0)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger  material-icons w-100" onclick="ref_pauseFunction(0)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a large explosion followed by a loud pop</strong> </div>
           <div class="text-dark mb-1"> (GT) a whooshing noise followed by an explosion </div>
-          <button type="button" id="show_video_0" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[0]()">Video</button>
-          <div id="video_player_0">
-            <iframe class="ytplayer" id='reference_player_0'
-              src="https://www.youtube.com/embed/6BJ455B1aAs?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(0)">Video</button>
+          <div id='reference_player_0'></div>
         </div>
         <div class="col-sm">
           <div class="btn-group d-flex" role="group">
-          <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[1]()">replay</button>
-          <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[1]()">play_arrow</button>
-          <button type="button" class="btn btn-sm btn-danger  material-icons w-100" onclick="ref_pauseFunction[1]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(1)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(1)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger  material-icons w-100" onclick="ref_pauseFunction(1)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a truck engine is running , a siren is occurring , and an adult male speaks</strong> </div>
           <div class="text-dark mb-1"> (GT) a child shouts , and adult male speaks , and an emergency vehicle siren sounds and the horn blows</div>
-          <button type="button" id="show_video_1" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[1]()">Video</button>
-          <div id="video_player_1">
-            <iframe class="ytplayer" id='reference_player_1'
-              src="https://www.youtube.com/embed/31WGUPOYS5g?enablejsapi=1&start=30&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(1)">Video</button>
+          <div id='reference_player_1'></div>
         </div>
         <div class="col-sm">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[2]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[2]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[2]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(2)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(2)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(2)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a small motor is running , whirring occurs , and a high - pitched whine is present</strong> </div>
           <div class="text-dark mb-1"> (GT) a drone whirring followed by a crashing sound</div>
-          <button type="button" id="show_video_2" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[2]()">Video</button>
-          <div id="video_player_2">
-            <iframe class="ytplayer" id='reference_player_2'
-              src="https://www.youtube.com/embed/EzWEO2WD_MM?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(2)">Video</button>
+          <div id='reference_player_2'></div>
         </div> <!-- end of col-sm -->
       </div> <!-- end of row -->
       <div class="row mb-5">
         <div class="col-sm">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[3]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[3]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[3]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(3)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(3)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(3)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a man and woman talking , then a baby crying</strong> </div>
           <div class="text-dark mb-1"> (GT) a kid crying as a man and a woman talk followed by a car door opening then closing</div>
-          <button type="button" id="show_video_3" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[3]()">Video</button>
-          <div id="video_player_3">
-            <iframe class="ytplayer" id='reference_player_3'
-              src="https://www.youtube.com/embed/_YS5uKWoB6g?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_3" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(3)">Video</button>
+          <div id='reference_player_3'></div>
         </div> <!-- end of col-sm -->
         <div class="col-sm">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[4]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[4]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[4]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(4)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(4)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(4)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a man speaking with a series of whistling in the background</strong> </div>
           <div class="text-dark mb-1"> (GT) a man talking as another person whistles while water trickles on a hard surface in the background</div>
-          <button type="button" id="show_video_4" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[4]()">Video</button>
-          <div id="video_player_4">
-            <iframe class="ytplayer" id='reference_player_4'
-              src="https://www.youtube.com/embed/fGGYeXR_LS8?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_4" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(4)">Video</button>
+          <div id='reference_player_4'></div>
         </div>
         <div class="col-sm">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[5]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[5]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[5]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(5)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(5)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(5)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a man speaking as plastic crinkles</strong> </div>
           <div class="text-dark mb-1"> (GT) plastic crumpling and crinkling are ongoing , and an adult male speaks</div>
-          <button type="button" id="show_video_5" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[5]()">Video</button>
-          <div id="video_player_5">
-            <iframe class="ytplayer" id='reference_player_5'
-              src="https://www.youtube.com/embed/hJtOGmN_KVw?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_5" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(5)">Video</button>
+          <div id='reference_player_5'></div>
         </div>
       </div> <!-- end of row -->
       <div class="row mb-5">
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[6]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[6]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[6]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(6)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(6)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(6)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a vehicle engine is running and revving , and tires squeal</strong> </div>
           <div class="text-dark mb-1"> (GT) white noise , then a motor revving up and a tire skidding</div>
-          <button type="button" id="show_video_6" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[6]()">Video</button>
-          <div id="video_player_6">
-            <iframe class="ytplayer" id='reference_player_6'
-              src="https://www.youtube.com/embed/bX2vDaHL26U?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_6" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(6)">Video</button>
+          <div id='reference_player_6'></div>
         </div>
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[7]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[7]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[7]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(7)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(7)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(7)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) hissing and gurgling of water flowing down a toilet</strong> </div>
           <div class="text-dark mb-1"> (GT) plastic crumpling and crinkling are ongoing , and an adult male speaks</div>
-          <button type="button" id="show_video_7" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[7]()">Video</button>
-          <div id="video_player_7">
-            <iframe class="ytplayer" id='reference_player_7'
-              src="https://www.youtube.com/embed/YIqpIjjee00?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_7" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(7)">Video</button>
+          <div id='reference_player_7'></div>
         </div>
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[8]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[8]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[8]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(8)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(8)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(8)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a man speaks with birds chirping in the distance</strong> </div>
           <div class="text-dark mb-1"> (GT) a man speaking with light wind followed by brief silence then birds chirping</div>
-          <button type="button" id="show_video_8" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[8]()">Video</button>
-          <div id="video_player_8">
-            <iframe class="ytplayer" id='reference_player_8'
-              src="https://www.youtube.com/embed/bygBWUkpaC8?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_8" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(8)">Video</button>
+          <div id='reference_player_8'></div>
         </div>
       </div> <!-- end of row -->
       <div class="row mb-5">
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[9]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[9]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[9]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(9)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(9)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(9)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a man speaking followed by bees buzzing</strong> </div>
           <div class="text-dark mb-1"> (GT) a man speaks with wind blowing and buzzing of insects</div>
-          <button type="button" id="show_video_9" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[9]()">Video</button>
-          <div id="video_player_9">
-            <iframe class="ytplayer" id='reference_player_9'
-              src="https://www.youtube.com/embed/yhDw7PZje3g?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_9" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(9)">Video</button>
+          <div id='reference_player_9'></div>
         </div>
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[10]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[10]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[10]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(10)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(10)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(10)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a thunderstorm is in the distance</strong> </div>
           <div class="text-dark mb-1"> (GT) rain falling and thunder roaring in the distance</div>
-          <button type="button" id="show_video_10" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[10]()">Video</button>
-          <div id="video_player_10">
-            <iframe class="ytplayer" id='reference_player_10'
-              src="https://www.youtube.com/embed/SGaIvgwwWSE?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_10" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(10)">Video</button>
+          <div id="reference_player_10"></div>
         </div>
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[11]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[11]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[11]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(11)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(11)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(11)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a large aircraft engine is running</strong> </div>
           <div class="text-dark mb-1"> (GT) humming of a nearby jet engine</div>
-          <button type="button" id="show_video_11" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[11]()">Video</button>
-          <div id="video_player_11">
-            <iframe class="ytplayer" id='reference_player_11'
-              src="https://www.youtube.com/embed/bpv_LneHmfU?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_11" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(11)">Video</button>
+          <div id="reference_player_11"></div>
         </div>
       </div> <!-- end of row -->
     </div> <!-- end of examples container -->
@@ -274,143 +226,47 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[12]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[12]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[12]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(12)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(12)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(12)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a vehicle engine revving</strong> </div>
           <div class="text-dark mb-1"> (GT) high pitched continuous drilling that slows down</div>
-          <button type="button" id="show_video_12" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[12]()">Video</button>
-          <div id="video_player_12">
-            <iframe class="ytplayer" id='reference_player_12'
-              src="https://www.youtube.com/embed/GuizRlAQ8qQ?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_12" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(12)">Video</button>
+          <div id="reference_player_12"></div>
         </div>
         <div class="col-sm-4">
           <div class="btn-group d-flex" role="group">
-            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction[13]()">replay</button>
-            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction[13]()">play_arrow</button>
-            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction[13]()">pause</button>
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(13)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(13)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(13)">pause</button>
           </div>
           <div class="text-dark mb-1"><strong> (Ours) a man speaking and a sewing machine working</strong> </div>
           <div class="text-dark mb-1"> (GT) two men speaking followed by plastic clacking then a power tool drilling</div>
-          <button type="button" id="show_video_13" class="btn btn-sm btn-outline-danger audio-control" onclick="ref_pauseFunction[13]()">Video</button>
-          <div id="video_player_13">
-            <iframe class="ytplayer" id='reference_player_13'
-              src="https://www.youtube.com/embed/FDwK7T1JO_0?enablejsapi=1&rel=0&showinfo=0&controls=0">
-            </iframe>
-          </div>
+          <button type="button" id="show_video_13" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(13)">Video</button>
+          <div id="reference_player_13"></div>
         </div>
       </div> <!-- end of row -->
     </div> <!-- end of container -->
-
-  <script type="text/javascript">
-    const N = 20;
-    $(document).ready(function() {
-      $('[data-toggle="tooltip"]').tooltip();
-
-      for (let i = 0; i < N; i++) {
-        var x = document.getElementById(`video_player_${i}`);
-        if (x.style.display === "none") x.style.display = "block";
-        else x.style.display = "none";
-      }
-    });
-
-    for (let i = 0; i < N; i++) {
-      (function(i) {
-        $(`#show_video_${i}`).click(function(){
-          var $target = $(`#video_player_${i}`),
-              $toggle = $(this);
-
-          $target.toggle( 800, function () {
-            $toggle.text(($target.is(':visible') ? 'Hide' : 'Video'));
-          });
-        });
-      })(i);
-    }
-
-    // console.log(typeof parseInt('audio.start_time'))
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-    var timer = 0;
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    let ref_player = new Array(N);
-    let ref_section = new Array(N);
-    let start_times = [0, 22, 70, 30, 30,
-                      140, 50, 30, 60, 30,
-                      30, 270, 20, 350, 30,
-                      30, 10, 30, 50, 160];
-    let ref_restartVideoSection = new Array(N);
-    let ref_restartFunction = new Array(N);
-    let ref_playFunction = new Array(N);
-    let ref_pauseFunction = new Array(N);
-
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    function onYouTubeIframeAPIReady() {
-      for (let i = 0; i < N; i++) {
-        ref_section[i] = {start: start_times[i], end: start_times[i] + 10};
-
-        ref_restartVideoSection[i] = function () {
-          ref_player[i].seekTo(ref_section[i].start);
-        }
-
-        ref_restartFunction[i] = function() {
-          clearTimeout(timer);
-          ref_player[i].seekTo(ref_section[i].start);
-          ref_player[i].playVideo();
-        }
-
-        ref_playFunction[i] = function() {
-          ref_player[i].playVideo();
-        }
-
-        ref_pauseFunction[i] = function() {
-          ref_player[i].pauseVideo();
-        }
-
-        ref_player[i] = new YT.Player(`reference_player_${i}`, {
-          events: {
-            'onReady': function (event) {
-                        // event.target.playVideo();
-                        ref_player[i].setPlaybackQuality("small")
-                        ref_player[i].seekTo(ref_section[i].start);
-                        // player.playVideo();
-                      },
-            'onStateChange': // this is called when playing, paused, finished etc.
-              function (event) {
-                // NOTE: setTimeout begins as soon as video starts playing. So a Pause will mess things up.
-                // Hence, when one pauses, it is best to wait until it refreshed to start time or reload the page.
-                switch (event.data) {
-                  case YT.PlayerState.PLAYING:
-                  //console.log("PLAYING")
-                  //var duration = ref_section[i].end - ref_section[i].start;
-                  var duration = 10;
-                  var current_time = ref_player[i].getCurrentTime();
-                  var remaining_time = ref_section[i].end - current_time;
-                  if (remaining_time > 0){
-                    timer = setTimeout(ref_restartVideoSection[i], remaining_time * 1000);
-                  }
-                  break;
-                // NOTE: there is a slight delay to seeking to beginning.
-                  case YT.PlayerState.PAUSED:
-                  //console.log("PAUSED")
-                  clearTimeout(timer);
-                  break;
-                }
-              }
-          },
-          autoplay: '0'
-        });
-      }
-    }
-  </script>
+    <script type="text/javascript">
+      const N = 14;
+      let videos = [
+        {videoId: "6BJ455B1aAs", startSeconds: 0 },
+        {videoId: "31WGUPOYS5g", startSeconds: 22 },
+        {videoId: "EzWEO2WD_MM", startSeconds: 70 },
+        {videoId: "_YS5uKWoB6g", startSeconds: 30 },
+        {videoId: "fGGYeXR_LS8", startSeconds: 30 },
+        {videoId: "hJtOGmN_KVw", startSeconds: 140 },
+        {videoId: "bX2vDaHL26U", startSeconds: 50 },
+        {videoId: "YIqpIjjee00", startSeconds: 30 },
+        {videoId: "bygBWUkpaC8", startSeconds: 60 },
+        {videoId: "yhDw7PZje3g", startSeconds: 30 },
+        {videoId: "SGaIvgwwWSE", startSeconds: 30 },
+        {videoId: "bpv_LneHmfU", startSeconds: 270 },
+        {videoId: "GuizRlAQ8qQ", startSeconds: 20 },
+        {videoId: "FDwK7T1JO_0", startSeconds: 350 },
+      ]
+    </script>
+    <script type="text/javascript" src="ytplayer.js"></script>
   </body>
 </html>
-
-
