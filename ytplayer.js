@@ -5,10 +5,6 @@ loadYoutubeApi();
 let player = new Array(N);
 const duration = 10;
 
-for (let i = 0; i < N; i++) {
-  videos[i].endSeconds = videos[i] + duration;
-}
-
 // This function creates an <iframe> (and YouTube player)
 // after the API code downloads.
 function onYouTubeIframeAPIReady() {
@@ -21,7 +17,7 @@ function onYouTubeIframeAPIReady() {
         enablejsapi: '1',
         rel: '0',
         start: videos[i].startSeconds,
-        end: videos[i].endSeconds,
+        end: videos[i].startSeconds + duration,
       },
     });
   }
