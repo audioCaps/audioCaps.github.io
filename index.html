@@ -1,0 +1,233 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Natural Audio Captioning</title>
+    <meta name="description" content="Audio Captioning Task">
+    <meta name="author" content="Dongjoo KIM, Hyunmin Lee">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato%3A300%2C300italic%2C400%2C400italic%2C700%2C700italic" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+      body {
+        font-family: Lato, sans-serif !important;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 500;
+      }
+
+      #authors img {
+        display: block;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+      }
+
+      #authors .name {
+        text-align: center;
+      }
+
+      .btn-sm {
+        line-height: 0.8;
+        margin-bottom: 0.5rem;
+      }
+
+      iframe {
+        width: 100%;
+        height: 200px;
+        display: none;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container mt-2 mb-5">
+      NAACL-HLT 2019
+    </header>
+    <div class="container mb-5">
+      <h1>AudioCaps: Generating Captions for Audios in the Wild</h1>
+    </div>
+    <div class="container mb-5">
+      <h2>Abstract</h2>
+      <p align="justify">
+      We explore the problem of <em>audio captioning</em>: generating natural language description for any kind of audio in the wild, which has been surprisingly unexplored in previous research.
+      We contribute a large-scale dataset of about 46K audio clips to human-written text pairs collected via crowdsourcing on the
+      <a href="https://research.google.com/audioset">AudioSet </a> dataset.
+      Our thorough empirical studies not only show that our collected captions are indeed faithful for audio inputs and but also discover what forms of audio representation and captioning models are effective for the audio captioning.
+      From extensive experiments, we also propose two novel components that help improve audio captioning performance: the top-down multi-scale encoder and aligned semantic attention.
+      </p>
+    </div>
+    <div class="container mb-5">
+      <div id="examples" class="row">
+        <div class="col-sm">
+          <div class="btn-group d-flex" role="group">
+          <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(0)">replay</button>
+          <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(0)">play_arrow</button>
+          <button type="button" class="btn btn-sm btn-danger  material-icons w-100" onclick="ref_pauseFunction(0)">pause</button>
+          </div>
+          <div class="text-dark mb-1"><strong> (Ours) a large explosion followed by a loud pop</strong> </div>
+          <div class="text-dark mb-1"> (GT) a whooshing noise followed by an explosion </div>
+          <button type="button" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(0)">Video</button>
+          <div id='reference_player_0'></div>
+        </div>
+        <div class="col-sm">
+          <div class="btn-group d-flex" role="group">
+          <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(1)">replay</button>
+          <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(1)">play_arrow</button>
+          <button type="button" class="btn btn-sm btn-danger  material-icons w-100" onclick="ref_pauseFunction(1)">pause</button>
+          </div>
+          <div class="text-dark mb-1"><strong> (Ours) a truck engine is running , a siren is occurring , and an adult male speaks</strong> </div>
+          <div class="text-dark mb-1"> (GT) a child shouts , and adult male speaks , and an emergency vehicle siren sounds and the horn blows</div>
+          <button type="button" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(1)">Video</button>
+          <div id='reference_player_1'></div>
+        </div>
+        <div class="col-sm">
+          <div class="btn-group d-flex" role="group">
+            <button type="button" class="btn btn-sm btn-warning material-icons w-100" onclick="ref_restartFunction(2)">replay</button>
+            <button type="button" class="btn btn-sm btn-success material-icons w-100" onclick="ref_playFunction(2)">play_arrow</button>
+            <button type="button" class="btn btn-sm btn-danger material-icons w-100" onclick="ref_pauseFunction(2)">pause</button>
+          </div>
+          <div class="text-dark mb-1"><strong> (Ours) a small motor is running , whirring occurs , and a high - pitched whine is present</strong> </div>
+          <div class="text-dark mb-1"> (GT) a drone whirring followed by a crashing sound</div>
+          <button type="button" class="btn btn-sm btn-outline-danger audio-control" onclick="show_video(2)">Video</button>
+          <div id='reference_player_2'></div>
+        </div> <!-- end of col-sm -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <!-- Todo update authors link -->
+    <div id="authors" class="container mb-5">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="images/dj_kim.png"/>
+          <div class="name">Dongjoo kim</div>
+        </div>
+        <div class="col-md-3">
+          <img src="images/bc_kim.png"/>
+          <div class="name">Byeonchang Kim</div>
+        </div>
+        <div class="col-md-3">
+          <img src="images/hm_lee.png"/>
+          <div class="name">Hyunmin Lee</div>
+        </div>
+        <div class="col-md-3">
+          <img src="images/gh_kim.png"/>
+          <div class="name">Gunhee Kim</div>
+        </div>
+      </div>
+    </div>
+    <div id="examples" class="container mb-5"></div>
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-md-5">
+          <h2>Dataset</h2>
+          <!-- TODO update dataset link -->
+          <p><a href="">Download the dataset here</a>.</p>
+          <h2>Paper</h2>
+          <!-- TODO update paper link -->
+          <p><a href="">Download the paper here</a>.</p><p>
+          </p>
+          <h2>Code</h2>
+          <p><a href="https://github.com/bckim92/audio2text">Download the code here</a>.</p>
+        </div> <!-- end of col-md-5 -->
+        <div class="col-md-7">
+          <h2>Bibtex</h2>
+          <pre style="font-size:12px;">
+          <!-- TODO update bibtex -->
+@inproceedings{krishna2017dense,
+    title={Dense-Captioning Events in Videos},
+    author={Krishna, Ranjay and Hata, Kenji and Ren, Frederic and Fei-Fei, Li and Niebles, Juan Carlos},
+    booktitle={International Conference on Computer Vision (ICCV)},
+    year={2017}
+}
+          </pre>
+        </div> <!-- end of col-md-7 -->
+      </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    <div id="acknowlegement" class="container mb-5">
+      <h2>Acknowledgement</h2>
+      <!-- TODO -->
+    </div>
+  </body>
+  <script>
+    const N = 3
+    var timer = 0;
+
+    loadYoutubeApi();
+
+    let player = new Array(N);
+    const duration = 10;
+    let videos = [
+      {videoId: "6BJ455B1aAs", startSeconds: 0 },
+      {videoId: "31WGUPOYS5g", startSeconds: 22 },
+      {videoId: "EzWEO2WD_MM", startSeconds: 70 },
+    ]
+    for (let i = 0; i < N; i++) {
+      videos[i].endSeconds = videos[i] + duration;
+    }
+
+    // This function creates an <iframe> (and YouTube player)
+    // after the API code downloads.
+    function onYouTubeIframeAPIReady() {
+      for (let i = 0; i < N; i++) {
+        player[i] = new YT.Player(`reference_player_${i}`, {
+          videoId: videos[i].videoId,
+          playerVars: {
+            autoplay: '0',
+            controls: '0',
+            enablejsapi: '1',
+            rel: '0',
+            start: videos[i].startSeconds,
+            end: videos[i].endSeconds,
+          },
+        });
+      }
+    }
+
+    function loadYoutubeApi() {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    function show_video(i) {
+      $(`#reference_player_${i}`).toggle();
+    };
+
+    function ref_restartVideoSection(i) {
+      return function() {
+        player[i].seekTo(videos[i].startSeconds);
+      }
+    }
+
+    function ref_restartFunction(i) {
+      clearTimeout(timer);
+      player[i].seekTo(videos[i].startSeconds);
+      player[i].playVideo();
+    }
+
+    function ref_playFunction(i) {
+      player[i].playVideo();
+    }
+
+    function ref_pauseFunction(i) {
+      player[i].pauseVideo();
+    }
+  </script>
+</html>
