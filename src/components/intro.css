@@ -1,0 +1,36 @@
+.intro {
+  height: 95vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/main-min.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+/*
+.no-webp .intro {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/main-min.png");
+}
+
+.webp .intro {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/main-min.webp");
+}
+*/
+
+.intro h1, .intro h2 {
+  color: white;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.intro h2 {
+  color: #cccccc;
+  font-weight: 300;
+}
