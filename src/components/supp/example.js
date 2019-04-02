@@ -17,6 +17,10 @@ class Example extends React.Component {
     playing: false,
   }
 
+  ref = player => {
+    this.player = player
+  }
+
   play = () => {
     this.setState({ playing: true })
   }
@@ -44,8 +48,8 @@ class Example extends React.Component {
           <button type="button" className="btn btn-sm btn-success material-icons w-100" onClick={this.play}>play_arrow</button>
           <button type="button" className="btn btn-sm btn-danger  material-icons w-100" onClick={this.pause}>pause</button>
         </div>
-        <div class="text-dark mb-1"><strong> (Ours) {video.Ours}</strong> </div>
-        <div class="text-dark mb-1"> (GT) {video.GT} </div>
+        <div className="text-dark mb-1"><strong> (Ours) {video.Ours}</strong> </div>
+        <div className="text-dark mb-1"> (GT) {video.GT} </div>
         <button type="button" className="btn btn-sm btn-outline-danger audio-control" onClick={this.toggleVisibility}>Video</button>
         <ReactPlayer
           ref={this.ref}
