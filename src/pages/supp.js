@@ -25,7 +25,7 @@ const VIDEOS = [
     GT: 'a drone whirring followed by a crashing sound',
   },
   {
-    id: "_YS5uKWoB6g",
+    id: "-YS5uKWoB6g", // original YT key "_YS5uKWoB6g"
     startSeconds: 30,
     Ours: 'a man and woman talking , then a baby crying',
     GT: 'a kid crying as a man and a woman talk followed by a car door opening then closing',

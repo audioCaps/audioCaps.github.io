@@ -57,7 +57,7 @@ class Example extends React.Component {
             display: visible ? 'block' : 'none',
           }}
           width='100%'
-          height='auto'
+          height='200px'
           playing={playing}
           url={require(`../../videos/${video.id}_${video.startSeconds}.mp4`)}
           onEnded={this.onEnded}
