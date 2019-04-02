@@ -30,7 +30,7 @@ class Ytplayer extends React.Component {
   }
 
   onProgress = state => {
-    const { video, duration } = this.props
+    const { duration } = this.props
     const { playedSeconds } = this.state
     this.setState(state)
     if (playedSeconds > duration) {

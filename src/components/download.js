@@ -14,10 +14,10 @@ const Download = () => (
       <div className="col-md-5">
         <h3>Dataset</h3>
         {/* TODO update dataset link */}
-        <p><a href="">Download the dataset here</a>.</p>
+        <p><a href="/">Download the dataset here</a>.</p>
         <h3>Paper</h3>
         {/* TODO update paper link */}
-        <p><a href="">Download the paper here</a>.</p><p>
+        <p><a href="/">Download the paper here</a>.</p><p>
         </p>
         <h3>Code</h3>
         <p><a href="https://github.com/bckim92/audio2text">Download the code here</a>.</p>
