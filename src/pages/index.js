@@ -6,22 +6,20 @@ import Header from "../components/header"
 import Intro from "../components/intro"
 import About from "../components/about"
 import Example from "../components/example"
-import Team from "../components/team"
 import Download from "../components/download"
 import Acknowledge from "../components/acknowledge"
 
 const IndexPage = () => (
-  <>
+  <div class="index">
     <Header />
     <Intro />
     <Layout>
       <About/>
       <Example/>
-      <Team/>
       <Download/>
       <Acknowledge/>
     </Layout>
-  </>
+  </div>
 )
 
 export default IndexPage

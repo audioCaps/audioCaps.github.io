@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import SEO from "../components/seo"
 import Example from "../components/supp/example"
-import './supp.css'
+import './supp.scss'
 
 const VIDEOS = [
   {

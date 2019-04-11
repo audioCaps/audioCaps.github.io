@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Lato%3A300%2C300italic%2C400%2C400italic%2C700%2C700italic');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.supp {
+  body {
+    font-family: Lato, sans-serif !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+  }
+
+  h6 {
+    margin-bottom: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+    display: none;
+    position: relative;
+  }
+
+  .btn-sm {
+    line-height: 0.8;
+    margin-bottom: 0.5rem;
+  }
+
+  .badge {
+    margin-bottom: 1rem;
+  }
+
+  .full-justify {
+    text-align: justify;
+  }
+
+  .full-justify:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+
+  .material-icons {
+    font-size: 1rem;
+  }
+
+  .btn {
+    height: 1.25rem;
+  }
+
+  .example {
+    margin-bottom: 2rem;
+  }
+}
