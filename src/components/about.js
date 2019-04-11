@@ -6,7 +6,7 @@ const About = () => (
     <h2>What is AudioCaps?</h2>
     <Row>
     <Col md={6}>
-      <img src={require(`../images/audio_vs_video.png`)}
+      <img src={require(`../images/audio_vs_video-min.png`)}
           alt="code"
           width="100%"
       />

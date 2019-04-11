@@ -10,7 +10,7 @@ import Download from "../components/download"
 import Acknowledge from "../components/acknowledge"
 
 const IndexPage = () => (
-  <div class="index">
+  <div className="index">
     <Header />
     <Intro />
     <Layout>
