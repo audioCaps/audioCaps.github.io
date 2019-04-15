@@ -12,7 +12,6 @@ const Header = ({ siteTitle }) => (
         <Nav.Link href="#about">about</Nav.Link>
         <Nav.Link href="#example">example</Nav.Link>
         <Nav.Link href="#download">download</Nav.Link>
-        <Nav.Link href="/supp">explore</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

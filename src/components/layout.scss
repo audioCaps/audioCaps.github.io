@@ -52,11 +52,20 @@ button {
   line-height: 30px;
 }
 
-.visibility-control {
-  display: inline-flex;
-  cursor: pointer;
-  height: 30px;
-  margin-bottom: 1rem;
+.toggle-video {
+  display: flex;
+  justify-content: space-between;
+  h4 {
+    display: inline-flex;
+    cursor: pointer;
+    height: 30px;
+    margin-bottom: 1rem;
+  }
+
+  .visible {
+    color: gray;
+    font-size: 20px;
+  }
 }
 
 #download {

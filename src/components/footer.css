@@ -1,7 +1,6 @@
 #footer {
   background-color: #212529;
-  height: 10vh;
-  line-height: 10vh;
+  padding: 1rem 0;
   text-align: center;
   color: white;
 }

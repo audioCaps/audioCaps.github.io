@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
           <main>{children}</main>
         </div>
         <Footer>
-          Copyright © 2019 AudioCaps authors
+          Copyright © AudioCaps authors &nbsp;| &nbsp;<span>Last update at 2019.04.16</span>
         </Footer>
       </>
     )}
