@@ -62,7 +62,7 @@ class Ytplayer extends React.Component {
     const { video } = this.props
     const { playing, visible, playedSeconds } = this.state
     return (
-      <>
+      <div className="video">
         <ToggleVideo
           visible={visible}
           toggleVisibility={this.toggleVisibility}
@@ -100,7 +100,7 @@ class Ytplayer extends React.Component {
           onPlay={this.onPlay}
           onPause={this.onPause}
         />
-      </>
+      </div>
     )
   }
 }
