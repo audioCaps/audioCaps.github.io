@@ -11,7 +11,6 @@ const bibtex = String.raw`@inproceedings{kim2019audiocaps,
 
 const Download = () => (
   <div id="download" className="container mb-5">
-    <Row>
       <h3>AudioCaps: Genrating Captions for Audios in The Wild</h3>
       <p>
         Chris Dongjoo Kim,&nbsp;
@@ -22,8 +21,6 @@ const Download = () => (
         <a href="https://github.com/bckim92/audio2text">[Code]&nbsp;</a>
         <a href="/">[Dataset]</a>
       </p>
-    </Row>
-        <Row>
       {/* TODO update paper link */}
       <a href="/">
         <img src={require(`../images/paper-min.png`)}
@@ -31,11 +28,8 @@ const Download = () => (
           width= '100%'
         />
       </a>
-    </Row>
-    <Row>
       <h5>Bibtex</h5>
       {/* TODO update bibtex */}
-    </Row>
     <pre>{bibtex}</pre>
   </div>
 )
