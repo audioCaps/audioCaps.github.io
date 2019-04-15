@@ -1,15 +1,14 @@
 import React from "react"
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
-import Overlaid from './overlaid'
 
 const ToggleVideo = ({ visible, toggleVisibility }) => (
-  <Overlaid>
-    <h4 className="visibility-control" onClick={toggleVisibility}>
-      { visible ? <MdVisibility/> : <MdVisibilityOff/> }
-      <span>
-        &nbsp; { visible ? 'Video Caption' : 'Audio Caption' }
-      </span>
+  <div className="toggle-video">
+    <h4 onClick={toggleVisibility} className={visible ? 'visible' : ''}>
+      <MdVisibilityOff/><span>&nbsp;Audio Caption</span>
     </h4>
-  </Overlaid>
+    <h4 onClick={toggleVisibility} className={!visible ? 'visible' : ''}>
+      <span>Video Caption&nbsp;</span><MdVisibility/>
+    </h4>
+  </div>
 )
 export default ToggleVideo
