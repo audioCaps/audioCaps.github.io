@@ -30,10 +30,10 @@ class Ytplayer extends React.Component {
   }
 
   onProgress = state => {
-    const { duration } = this.props
+    const { video } = this.props
     const { playedSeconds } = this.state
     this.setState(state)
-    if (playedSeconds > duration) {
+    if (playedSeconds > video.duration) {
       this.player.seekTo(0)
     }
   }
@@ -78,7 +78,8 @@ class Ytplayer extends React.Component {
           }
           <ProgressBar
             id="progress"
-            now={playedSeconds * 10}
+            // To show full progress bar
+            now={playedSeconds / (video.duration - 1) * 100 }
             animated
           />
         </div>
@@ -91,6 +92,7 @@ class Ytplayer extends React.Component {
             }
           }
           width='100%'
+          progressInterval={100}
           playing={playing}
           url={require(`../videos/${video.id}_${video.startSeconds}.mp4`)}
           onEnded={this.onEnded}

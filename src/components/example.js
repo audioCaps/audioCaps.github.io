@@ -9,19 +9,22 @@ const VIDEOS = [
     id: "EzWEO2WD_MM",
     startSeconds: 70,
     audioCaption: "A drone whirring followed by a crashing sound",
-    videoCaption: "A toy helicopter is flying over the bed in the room only to crash into the wall"
+    videoCaption: "A toy helicopter is flying over the bed in the room only to crash into the wall",
+    duration: 9,
   },
   {
     id: "6BJ455B1aAs",
     startSeconds: 0,
     audioCaption: "A whooshing noise followed by an explosion",
-    videoCaption: "A missile blasted a tall grey tower"
+    videoCaption: "A missile blasted a tall grey tower",
+    duration: 6,
   },
   {
     id: "31WGUPOYS5g",
     startSeconds: 22,
     audioCaption: "A child shouts , and adult male speaks, and an emergency vehicle siren sounds and the horn blows",
-    videoCaption: "Dressed up as Santa Claus, a man is waving from the top of a fire engine."
+    videoCaption: "Dressed up as Santa Claus, a man is waving from the top of a fire engine.",
+    duration: 9,
   },
 ]
 class Example extends React.Component {
@@ -40,7 +43,7 @@ class Example extends React.Component {
         <h2>Example</h2>
         <Row>
           <Col md={{ span: 10, offset: 1 }}>
-            <Ytplayer video={VIDEOS[active]} duration={10}/>
+            <Ytplayer video={VIDEOS[active]} />
             <Pagination>
               {Array.from(Array(numItems).keys()).map((number) => (
                 <Pagination.Item
