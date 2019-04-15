@@ -1,5 +1,4 @@
 import React from "react"
-import { Row } from "react-bootstrap"
 
 const bibtex = String.raw`@inproceedings{kim2019audiocaps,
   title={AudioCaps: Generating Captions for Audios in The Wild},
@@ -29,7 +28,6 @@ const Download = () => (
         />
       </a>
       <h5>Bibtex</h5>
-      {/* TODO update bibtex */}
     <pre>{bibtex}</pre>
   </div>
 )
