@@ -18,11 +18,9 @@ This is demo page for [audiocaps.github.io](audiocaps.github.io). We will open o
 
 2. **Open the source code and start editing**
 
-    Your site is now running at `http://localhost:8000`! 
+    Your site is now running at `http://localhost:8000`! Save your changes and the browser will update in real time.
 
-    Save your changes and the browser will update in real time.
-
-3.  **Deploy**
+3. **Deploy**
 
     Stay at `code` branch and deploy.
 
@@ -40,7 +38,7 @@ A quick look at the top-level files and directories you'll see. You usually want
     ├── src
         ├── audios
         ├── components
-        		 ├── supp
+            ├── supp
         ├── pages
             ├── index.js
             ├── supp.js
@@ -58,7 +56,7 @@ A quick look at the top-level files and directories you'll see. You usually want
         1.  `index.js`, `index.scss` : index page
         2.  `supp.js`, `supp.scss` : supplementary page
     4.  **`videos`**
-2.  **`package.json`**: This file includes metadata (the project’s name, author, etc) and which packages to install for your project.
+2.  **`package.json`**: This file specifies node packages to install and handy commands.
 3.  `gatsby-config.js`: This is the main configuration file for a Gatsby site including:
     1.  Site metadata like title and description for Search Engine Optimization.
     2.  Gatsby plugins you’d like to include (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).

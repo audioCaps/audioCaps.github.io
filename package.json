@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "AudiocapsDemoPage",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Demo page for the paper, Audiocaps: Generating Audios in the Wild NAACL-HLT 2019",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "qpzm <lhm1442e@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gatsby": "^2.3.3",
@@ -44,9 +44,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/audiocaps/audiocaps.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/audiocaps/audiocaps.github.io/issues"
   }
 }
