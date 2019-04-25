@@ -9,7 +9,7 @@ const Purpose = () => (
       />
     <p align="justify">
       The captions from (a) <a href="https://sites.google.com/site/describingmovies/home">LSMDC</a> and (b) <a href="https://www.microsoft.com/en-us/research/publication/msr-vtt-a-large-video-description-dataset-for-bridging-video-and-language/">MSR-VTT</a>
-      have multiple visually <span style={{color: '#007bff'}}>grounded vocabularies</span>, <br/>
+      have multiple visually <span style={{color: '#007bff'}}>grounded vocabularies</span>,
       whereas (c) the caption from <em>AudioCaps</em> contains vocabularies relying on <span style={{color: 'red'}}>auditory cues</span>.
     </p>
   </div>
