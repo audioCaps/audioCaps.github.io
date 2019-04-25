@@ -59,7 +59,9 @@ A quick look at the top-level files and directories you'll see. You usually want
         2.  `supp.js`, `supp.scss` : supplementary page
     4.  **`videos`**
 2.  **`package.json`**: This file includes metadata (the project’s name, author, etc) and which packages to install for your project.
-3.  `gatsby-config.js`: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+3.  `gatsby-config.js`: This is the main configuration file for a Gatsby site including:
+    1.  Site metadata like title and description for Search Engine Optimization.
+    2.  Gatsby plugins you’d like to include (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
 ### Auto-generated files
 
