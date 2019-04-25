@@ -2,6 +2,8 @@
 
 
 
+This is demo page for [audiocaps.github.io](audiocaps.github.io). We will open our paper and source code soon. 
+
 ## 🚀 Quick start
 
 1. **Start developing.**
@@ -22,11 +24,12 @@
 
 3.  **Deploy**
 
-    ```sh
-    yarn deploy
-    ```
+    Stay at `code` branch and deploy.
 
-    Build result is pushed to `master` branch in your remote git repo.
+    ```sh
+    git push # push your codes
+    yarn deploy # Build & push to master
+    ```
 
 ## 🧐 What's inside?
 
