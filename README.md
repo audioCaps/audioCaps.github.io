@@ -1,10 +1,17 @@
-<h1 align="center"> AudioCaps Demo page </h1> 
+<h1 align="center"> AudioCaps Demo page </h1>
 
 
 
-This is demo page for [audiocaps.github.io](audiocaps.github.io). We will open our paper and source code soon. 
+This is demo page for [audiocaps.github.io](audiocaps.github.io). We will open our paper and source code soon.
 
 ## 🚀 Quick start
+
+0. **Dependencies.**
+
+    - yarn
+    - npm
+    - node
+    - gatsby
 
 1. **Start developing.**
 
@@ -49,10 +56,10 @@ A quick look at the top-level files and directories you'll see. You usually want
     ├── package.json
     └── README.md
 
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. 
+1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template.
     1.  `audios` : currently not used.
     2.  **`components`** : This directory contains all necessary components used in `pages`
-    3.  **`pages`** 
+    3.  **`pages`**
         1.  `index.js`, `index.scss` : index page
         2.  `supp.js`, `supp.scss` : supplementary page
     4.  **`videos`**
@@ -72,4 +79,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 
 
-## 
+##

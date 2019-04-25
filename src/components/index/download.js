@@ -10,7 +10,7 @@ const bibtex = String.raw`@inproceedings{kim2019audiocaps,
 
 const Download = () => (
   <div id="download" className="container mb-5">
-      <h3>AudioCaps: Genrating Captions for Audios in The Wild</h3>
+      <h3>AudioCaps: Generating Captions for Audios in The Wild</h3>
       <p>
         Chris Dongjoo Kim,&nbsp;
         <a href="https://bckim92.github.io/">Byeongchang Kim,&nbsp;</a>
