@@ -1,6 +1,6 @@
 import React from "react"
-import 'bootstrap/dist/css/bootstrap.css'
-import './index.scss'
+import "bootstrap/dist/css/bootstrap.css"
+import "./index.scss"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,13 +18,13 @@ const IndexPage = () => (
     <TopNav />
     <Intro />
     <Layout>
-      <SEO title='AudioCaps: Generating Captions for Audios in the Wild'/>
-      <About/>
-      <Example/>
-      <Purpose/>
-      <Download/>
-      <Team/>
-      <Acknowledge/>
+      <SEO title="AudioCaps: Generating Captions for Audios in the Wild" />
+      <About />
+      <Example />
+      <Purpose />
+      <Download />
+      <Team />
+      <Acknowledge />
     </Layout>
   </div>
 )

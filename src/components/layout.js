@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Footer from './index/footer'
+import Footer from "./index/footer"
 import { StaticQuery, graphql } from "gatsby"
 
 const Layout = ({ children }) => (
@@ -34,7 +34,8 @@ const Layout = ({ children }) => (
           <main>{children}</main>
         </div>
         <Footer>
-          Copyright © AudioCaps authors &nbsp;| &nbsp;<span>Last update at 2019.04.16</span>
+          Copyright © AudioCaps authors &nbsp;| &nbsp;
+          <span>Last update at 2019.04.16</span>
         </Footer>
       </>
     )}
