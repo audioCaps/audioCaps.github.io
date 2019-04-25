@@ -4,8 +4,8 @@ const Person = ({ name, link }) => (
   <div className="col-md-3 person">
     <a href={link}>
     <picture style={{marginBottom: '1rem'}}>
-      <source type="image/webp" srcSet={require(`../images/${name}-min.webp`)} />
-      <img src={require(`../images/${name}-min.png`)} alt={name} />
+      <source type="image/webp" srcSet={require(`../../images/${name}-min.webp`)} />
+      <img src={require(`../../images/${name}-min.png`)} alt={name} />
     </picture>
     <div style={{textAlign: 'center'}}>
       {name}

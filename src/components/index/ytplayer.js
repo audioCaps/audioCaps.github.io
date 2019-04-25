@@ -94,7 +94,7 @@ class Ytplayer extends React.Component {
           width='100%'
           progressInterval={100}
           playing={playing}
-          url={require(`../videos/${video.id}_${video.startSeconds}.mp4`)}
+          url={require(`../../videos/${video.id}_${video.startSeconds}.mp4`)}
           onEnded={this.onEnded}
           onProgress={this.onProgress}
           onPlay={this.onPlay}

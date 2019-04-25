@@ -3,7 +3,7 @@ import React from 'react'
 const Purpose = () => (
   <div id="purpose" className="container mb-5">
     <h2>Why AudioCaps?</h2>
-      <img src={require(`../images/dataset_comparison-min.png`)}
+    <img src={require(`../../images/dataset_comparison-min.png`)}
           alt="dataset-comparison"
           width="100%"
       />

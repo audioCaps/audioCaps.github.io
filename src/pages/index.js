@@ -1,19 +1,20 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css'
+import './index.scss'
 
 import Layout from "../components/layout"
-import Header from "../components/header"
-import Intro from "../components/intro"
-import About from "../components/about"
-import Example from "../components/example"
-import Purpose from "../components/purpose"
-import Download from "../components/download"
-import Team from "../components/team"
-import Acknowledge from "../components/acknowledge"
+import TopNav from "../components/index/top_nav"
+import Intro from "../components/index/intro"
+import About from "../components/index/about"
+import Example from "../components/index/example"
+import Purpose from "../components/index/purpose"
+import Download from "../components/index/download"
+import Team from "../components/index/team"
+import Acknowledge from "../components/index/acknowledge"
 
 const IndexPage = () => (
   <div className="index">
-    <Header />
+    <TopNav />
     <Intro />
     <Layout>
       <About/>

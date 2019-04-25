@@ -22,7 +22,7 @@ const Download = () => (
       </p>
       {/* TODO update paper link */}
       <a href="/">
-        <img src={require(`../images/paper-min.png`)}
+        <img src={require(`../../images/paper-min.png`)}
           alt= 'code'
           width= '100%'
         />
