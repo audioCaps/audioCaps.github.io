@@ -8,7 +8,7 @@ const VIDEOS = [
   {
     id: "EzWEO2WD_MM",
     startSeconds: 70,
-    audioCaption: "A drone whirring followed by a crashing sound",
+    audioCaption: "A drone is whirring followed by a crashing sound",
     videoCaption: "A toy helicopter is flying over the bed in the room only to crash into the wall",
     duration: 9,
   },
@@ -22,7 +22,7 @@ const VIDEOS = [
   {
     id: "31WGUPOYS5g",
     startSeconds: 22,
-    audioCaption: "A child shouts , and adult male speaks, and an emergency vehicle siren sounds and the horn blows",
+    audioCaption: "A child shouts, and an adult male speaks, while an emergency vehicle siren sounds with the horn blowing",
     videoCaption: "Dressed up as Santa Claus, a man is waving from the top of a fire engine.",
     duration: 9,
   },
@@ -40,7 +40,7 @@ class Example extends React.Component {
     const numItems = VIDEOS.length
     return (
       <div id="example" className="container mb-5">
-        <h2>Example</h2>
+        <h2>Examples</h2>
         <Row>
           <Col md={{ span: 10, offset: 1 }}>
             <Ytplayer video={VIDEOS[active]} />
