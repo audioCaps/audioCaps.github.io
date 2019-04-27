@@ -13,14 +13,14 @@ const About = () => (
   </Col>
     <Col>
       <p align="justify">
-      We explore the problem of <em>audio captioning</em>: generating natural language description for any kind of audio in the wild.
+      We explore <strong>audio captioning</strong>: generating natural language description for any kind of audio in the wild.
       </p>
       <p align="justify">
-        We contribute a large-scale dataset of about <strong>46K</strong> audio clips to human-written text pairs collected via crowdsourcing on the
-      &nbsp;<a href="https://research.google.com/audioset">AudioSet </a> dataset.
+        We contribute AudioCaps, a large-scale dataset of about <strong>46K</strong> audio clips to human-written text pairs collected via crowdsourcing on the
+      &nbsp;<a href="https://research.google.com/audioset">AudioSet </a> dataset. The collected captions of AudioCaps are indeed faithful for audio inputs.
       </p>
       <p align="justify">
-        We show that our collected captions are indeed faithful for audio inputs and discover what forms of audio representation and captioning models are effective for the audio captioning.
+        We provide the source code of the models to explore what forms of audio representation and captioning models are effective for the audio captioning.
       </p>
     </Col>
   </Row>

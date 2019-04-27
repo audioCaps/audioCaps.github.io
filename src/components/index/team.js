@@ -20,7 +20,7 @@ const Team = () => (
     <h2>Team</h2>
     <div className="row" align="center">
       <Person name="Dongjoo Kim"
-              link="https://github.com/cdjkim"
+              link="http://vision.snu.ac.kr/people/dongjookim.html"
       />
       <Person name="Byeongchang Kim"
               link="https://bckim92.github.io"
