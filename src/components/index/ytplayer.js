@@ -80,7 +80,6 @@ class Ytplayer extends React.Component {
             id="progress"
             // To show full progress bar
             now={playedSeconds / (video.duration - 1) * 100 }
-            animated
           />
         </div>
         <ReactPlayer

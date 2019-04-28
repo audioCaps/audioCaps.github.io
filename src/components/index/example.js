@@ -10,7 +10,7 @@ const VIDEOS = [
     startSeconds: 70,
     audioCaption: "A drone is whirring followed by a crashing sound",
     videoCaption: "A toy helicopter is flying over the bed in the room only to crash into the wall",
-    duration: 9,
+    duration: 10,
   },
   {
     id: "6BJ455B1aAs",

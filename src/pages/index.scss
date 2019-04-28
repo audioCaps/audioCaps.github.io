@@ -25,14 +25,13 @@ pre {
   height: 30px;
   border-radius: 0;
   margin-bottom: 0.5rem;
+  .progress-bar {
+    background-color: #415a6a;
+  }
 }
-#progress::-moz-progress-bar { background: #007bff; }
-#progress::-webkit-progress-value { background: #007bff; }
-#progress { color: #007bff; }
 
 button {
   height: 30px;
-  line-height: 30px;
 }
 
 .toggle-video {
