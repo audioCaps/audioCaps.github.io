@@ -8,8 +8,8 @@ const bibtex = String.raw`@inproceedings{audiocaps,
 }
 `
 
-const Download = () => (
-  <div id="download" className="container mb-5">
+const Papers = () => (
+  <div id="papers" className="container mb-5">
       <h2>Papers</h2>
       <h5>AudioCaps: Generating Captions for Audios in The Wild</h5>
       <p>
@@ -33,4 +33,4 @@ const Download = () => (
   </div>
 )
 
-export default Download
+export default Papers

@@ -9,7 +9,8 @@ import Intro from "../components/index/intro"
 import About from "../components/index/about"
 import Example from "../components/index/example"
 //import Purpose from "../components/index/purpose"
-import Download from "../components/index/download"
+import Papers from "../components/index/papers"
+import Downloads from "../components/index/downloads"
 import Team from "../components/index/team"
 import Acknowledge from "../components/index/acknowledge"
 
@@ -22,7 +23,8 @@ const IndexPage = () => (
       <About />
       <Example />
       {/*<Purpose />*/}
-      <Download />
+      <Papers />
+      <Downloads />
       <Team />
       <Acknowledge />
     </Layout>
