@@ -2,14 +2,15 @@ import React from "react"
 import { Col, Row, Pagination } from "react-bootstrap"
 import { Link } from "gatsby"
 
-import Ytplayer from './ytplayer'
+import Ytplayer from "./ytplayer"
 
 const VIDEOS = [
   {
     id: "EzWEO2WD_MM",
     startSeconds: 70,
     audioCaption: "A drone is whirring followed by a crashing sound",
-    videoCaption: "A toy helicopter is flying over the bed in the room only to crash into the wall",
+    videoCaption:
+      "A toy helicopter is flying over the bed in the room only to crash into the wall",
     duration: 10,
   },
   {
@@ -22,20 +23,21 @@ const VIDEOS = [
   {
     id: "31WGUPOYS5g",
     startSeconds: 22,
-    audioCaption: "A child shouts, and an adult male speaks, while an emergency vehicle siren sounds with the horn blowing",
-    videoCaption: "Dressed up as Santa Claus, a man is waving from the top of a fire engine.",
+    audioCaption:
+      "A child shouts, and an adult male speaks, while an emergency vehicle siren sounds with the horn blowing",
+    videoCaption:
+      "Dressed up as Santa Claus, a man is waving from the top of a fire engine.",
     duration: 9,
   },
 ]
 class Example extends React.Component {
+  state = { active: 0 }
 
-  state = {active: 0}
-
-  changeActive= (n) => {
-    this.setState({active: n})
+  changeActive = n => {
+    this.setState({ active: n })
   }
 
-  render= () => {
+  render = () => {
     const { active } = this.state
     const numItems = VIDEOS.length
     return (
@@ -45,7 +47,7 @@ class Example extends React.Component {
           <Col md={{ span: 10, offset: 1 }}>
             <Ytplayer video={VIDEOS[active]} />
             <Pagination>
-              {Array.from(Array(numItems).keys()).map((number) => (
+              {Array.from(Array(numItems).keys()).map(number => (
                 <Pagination.Item
                   key={number}
                   value={number}
@@ -53,10 +55,12 @@ class Example extends React.Component {
                   onClick={() => this.changeActive(number)}
                 >
                   {number + 1}
-                </Pagination.Item>)
-              )}
+                </Pagination.Item>
+              ))}
               <li className="page-item">
-                <Link className="page-link" to="/supp">See more</Link>
+                <Link className="page-link" to="/supp">
+                  See more
+                </Link>
               </li>
             </Pagination>
           </Col>

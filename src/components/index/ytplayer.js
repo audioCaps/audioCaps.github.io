@@ -1,9 +1,9 @@
 import React from "react"
-import ReactPlayer from 'react-player'
-import ProgressBar from 'react-bootstrap/ProgressBar'
-import { MdPlayArrow, MdPause } from 'react-icons/md'
-import Caption from './caption'
-import ToggleVideo from './toggleVideo'
+import ReactPlayer from "react-player"
+import ProgressBar from "react-bootstrap/ProgressBar"
+import { MdPlayArrow, MdPause } from "react-icons/md"
+import Caption from "./caption"
+import ToggleVideo from "./toggleVideo"
 
 class Ytplayer extends React.Component {
   state = {
@@ -67,35 +67,43 @@ class Ytplayer extends React.Component {
           visible={visible}
           toggleVisibility={this.toggleVisibility}
         />
-        <Caption
-          visible={visible}
-          video={video}
-        />
+        <Caption visible={visible} video={video} />
         <div className="btn-group d-flex" role="group">
-          { playing ?
-            <button type="button" className="btn btn-sm btn-warning w-100" onClick={this.pause}><MdPause /></button>
-            : <button type="button" className="btn btn-sm btn-success w-100" onClick={this.play}><MdPlayArrow /></button>
-          }
+          {playing ? (
+            <button
+              type="button"
+              className="btn btn-sm btn-warning w-100"
+              onClick={this.pause}
+            >
+              <MdPause />
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="btn btn-sm btn-success w-100"
+              onClick={this.play}
+            >
+              <MdPlayArrow />
+            </button>
+          )}
           <ProgressBar
             id="progress"
             // To show full progress bar
-            now={playedSeconds / (video.duration - 1) * 100 }
+            now={(playedSeconds / (video.duration - 1)) * 100}
           />
         </div>
         <ReactPlayer
           ref={this.ref}
-          style={
-            {
-              marginBottom: '1rem',
-              display: visible ? 'block' : 'none',
-            }
-          }
+          style={{
+            marginBottom: "1rem",
+            display: visible ? "block" : "none",
+          }}
           config={{
             youtube: {
-              playerVars: { showinfo: 1, fs: 1 }
+              playerVars: { showinfo: 1, fs: 1 },
             },
           }}
-          width='100%'
+          width="100%"
           progressInterval={100}
           playing={playing}
           url={require(`../../videos/${video.id}_${video.startSeconds}.mp4`)}

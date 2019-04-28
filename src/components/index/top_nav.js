@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
     <Navbar.Brand href="#home">AudioCaps</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto"></Nav>
+      <Nav className="mr-auto" />
       <Nav>
         <Nav.Link href="#about">About</Nav.Link>
         <Nav.Link href="#example">Examples</Nav.Link>
