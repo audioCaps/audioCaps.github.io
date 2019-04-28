@@ -91,6 +91,11 @@ class Ytplayer extends React.Component {
               display: visible ? 'block' : 'none',
             }
           }
+          config={{
+            youtube: {
+              playerVars: { showinfo: 1, fs: 1 }
+            },
+          }}
           width='100%'
           progressInterval={100}
           playing={playing}

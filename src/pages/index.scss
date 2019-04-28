@@ -100,3 +100,15 @@ button {
 .video .btn-sm {
   line-height: 0;
 }
+
+#acknowlege {
+  img {
+    width: 200px;
+  }
+
+  @media (min-width:576px) {
+    img:last-child {
+      margin-top: -17px;
+    }
+  }
+}
