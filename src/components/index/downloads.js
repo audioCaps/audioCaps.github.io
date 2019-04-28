@@ -1,17 +1,20 @@
 import React from "react"
+import Image from "./image"
 
 const Downloads = () => (
   <div id="downloads" className="container mb-5">
-    <h2>Downloads</h2>
+    <h2>Downloads <span className="soon">Comming soon!</span></h2>
     <div className="images">
-      <div className="icon">
-        <img src={require("../../images/Database-icon-min.png")} />
-        <span>Data</span>
-      </div>
-      <div className="icon">
-        <img src={require("../../images/Github-min.png")} />
-        <span>Code</span>
-      </div>
+      <Image src="Database-icon-min.png"
+             label="Data"
+             link="/"
+             wrapperClass="icon"
+      />
+      <Image src="GitHub-min.png"
+             label="Code"
+             link="/"
+             wrapperClass="icon"
+      />
     </div>
   </div>
 )
