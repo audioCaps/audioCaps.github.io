@@ -9,9 +9,9 @@ const Header = ({ siteTitle }) => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto"></Nav>
       <Nav>
-        <Nav.Link href="#about">about</Nav.Link>
-        <Nav.Link href="#example">example</Nav.Link>
-        <Nav.Link href="#download">download</Nav.Link>
+        <Nav.Link href="#about">About</Nav.Link>
+        <Nav.Link href="#example">Examples</Nav.Link>
+        <Nav.Link href="#download">Downloads</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
