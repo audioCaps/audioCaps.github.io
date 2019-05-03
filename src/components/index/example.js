@@ -40,7 +40,6 @@ class Example extends React.Component {
   }
 
   toggleVisible = () => {
-    console.log(this.state.visible)
     this.setState({ visible: !this.state.visible })
   }
 

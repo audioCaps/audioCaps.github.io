@@ -56,6 +56,7 @@ class Ytplayer extends React.Component {
   render() {
     const { video, visible } = this.props
     const { playing, playedSeconds } = this.state
+    const ytUrl = `https://www.youtube.com/watch?v=${video.id}`;
     return (
       <div className="video">
         <Caption visible={visible} video={video} />
@@ -105,14 +106,17 @@ class Ytplayer extends React.Component {
             onPlay={this.onPlay}
             onPause={this.onPause}
           />
-          <a
+          <div
+            className="yt-link"
             style={{
               display: visible ? "block" : "none",
             }}
-            href={`https://www.youtube.com/watch?v=${video.id}`}
-            className="yt-link">
+            onClick={() => {
+              window.open(ytUrl, '_blank').opener=null;
+            }}
+          >
             <TiSocialYoutube />
-          </a>
+          </div>
         </div>
       </div>
     )
