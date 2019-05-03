@@ -3,6 +3,7 @@ import { Col, Row, Pagination } from "react-bootstrap"
 import { Link } from "gatsby"
 
 import Ytplayer from "./ytplayer"
+import ToggleInput from "./toggleInput"
 
 const VIDEOS = [
   {
@@ -30,22 +31,34 @@ const VIDEOS = [
     duration: 9,
   },
 ]
+
 class Example extends React.Component {
-  state = { active: 0 }
+  state = { active: 0, visible: false }
 
   changeActive = n => {
     this.setState({ active: n })
   }
 
+  toggleVisible = () => {
+    console.log(this.state.visible)
+    this.setState({ visible: !this.state.visible })
+  }
+
+
   render = () => {
-    const { active } = this.state
+    const { active, visible } = this.state
     const numItems = VIDEOS.length
     return (
       <div id="example" className="container mb-5">
-        <h2>Examples</h2>
+        <div className="title">
+          <h2>Examples</h2>
+          <ToggleInput
+            toggle={this.toggleVisible}
+          />
+        </div>
         <Row>
           <Col md={{ span: 10, offset: 1 }}>
-            <Ytplayer video={VIDEOS[active]} />
+            <Ytplayer video={VIDEOS[active]} visible={visible}/>
             <Pagination>
               {Array.from(Array(numItems).keys()).map(number => (
                 <Pagination.Item

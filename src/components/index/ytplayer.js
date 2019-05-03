@@ -3,11 +3,9 @@ import ReactPlayer from "react-player"
 import ProgressBar from "react-bootstrap/ProgressBar"
 import { MdPlayArrow, MdPause } from "react-icons/md"
 import Caption from "./caption"
-import ToggleVideo from "./toggleVideo"
 
 class Ytplayer extends React.Component {
   state = {
-    visible: false,
     playing: false,
     playedSeconds: 0,
   }
@@ -54,19 +52,11 @@ class Ytplayer extends React.Component {
     this.player.seekTo(0)
   }
 
-  toggleVisibility = () => {
-    this.setState({ visible: !this.state.visible })
-  }
-
   render() {
-    const { video } = this.props
-    const { playing, visible, playedSeconds } = this.state
+    const { video, visible } = this.props
+    const { playing, playedSeconds } = this.state
     return (
       <div className="video">
-        <ToggleVideo
-          visible={visible}
-          toggleVisibility={this.toggleVisibility}
-        />
         <Caption visible={visible} video={video} />
         <div className="btn-group d-flex" role="group">
           {playing ? (
@@ -104,6 +94,7 @@ class Ytplayer extends React.Component {
             },
           }}
           width="100%"
+          height=""
           progressInterval={100}
           playing={playing}
           url={require(`../../videos/${video.id}_${video.startSeconds}.mp4`)}
