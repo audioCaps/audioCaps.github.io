@@ -1,5 +1,6 @@
 .intro {
-  height: 25vh;
+  min-height: 25vh;
+  padding: 1rem 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -8,13 +9,10 @@
   background-repeat: repeat;
   background-position: left center;
   border-radius: 0;
-
-  h1, h2 {
-    color: white;
-    text-align: center;
-  }
+  text-align: center;
 
   h1 {
+    color: white;
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 16px;
@@ -23,5 +21,12 @@
   h2 {
     color: #cccccc;
     font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 }
