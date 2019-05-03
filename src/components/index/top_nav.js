@@ -3,7 +3,7 @@ import React from "react"
 import { Navbar, Nav } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => (
-  <Navbar>
+  <Navbar collapseOnSelect expand="lg">
     <Navbar.Brand href="#home">AudioCaps</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
