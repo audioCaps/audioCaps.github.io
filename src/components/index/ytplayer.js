@@ -2,8 +2,8 @@ import React from "react"
 import ReactPlayer from "react-player"
 import ProgressBar from "react-bootstrap/ProgressBar"
 import { MdPlayArrow, MdPause } from "react-icons/md"
-import { TiSocialYoutube } from "react-icons/ti"
 import Caption from "./caption"
+import { Image } from "./image"
 
 class Ytplayer extends React.Component {
   state = {
@@ -53,10 +53,15 @@ class Ytplayer extends React.Component {
     this.player.seekTo(0)
   }
 
+  openNewTabSecurely = () => {
+    const { video } = this.props
+    const ytUrl = `https://www.youtube.com/watch?v=${video.id}`
+    window.open(ytUrl, '_blank').opener = null
+  }
+
   render() {
     const { video, visible } = this.props
     const { playing, playedSeconds } = this.state
-    const ytUrl = `https://www.youtube.com/watch?v=${video.id}`;
     return (
       <div className="video">
         <Caption visible={visible} video={video} />
@@ -87,9 +92,9 @@ class Ytplayer extends React.Component {
         <div style={{position: "relative"}}>
           <ReactPlayer
             ref={this.ref}
+            className={!visible ? 'invisible' : ''}
             style={{
               marginBottom: "1rem",
-              display: visible ? "block" : "none",
             }}
             config={{
               youtube: {
@@ -107,15 +112,10 @@ class Ytplayer extends React.Component {
             onPause={this.onPause}
           />
           <div
-            className="yt-link"
-            style={{
-              display: visible ? "block" : "none",
-            }}
-            onClick={() => {
-              window.open(ytUrl, '_blank').opener=null;
-            }}
+            className={`yt-link ${!visible && 'invisible'}`}
+            onClick={this.openNewTabSecurely}
           >
-            <TiSocialYoutube />
+            <Image fileName='yt_icon_rgb.png' />
           </div>
         </div>
       </div>

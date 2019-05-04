@@ -35,48 +35,37 @@ pre {
     display: flex;
     margin-bottom: 3rem;
   }
+
   h2 {
     margin-bottom: 0;
     margin-right: 1rem;
   }
 
-  .video {
-    button {
+  .video button {
       height: 30px;
-    }
   }
 
-  .title {
-    svg {
+  .title svg {
       width: 1.25rem;
       height: 1.25rem;
       margin-right: 0.2rem;
-    }
   }
 
-  .yt-link {
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    color: black;
-    z-index: 2;
-    right: 3px;
-    bottom: 3px;
-    cursor: pointer;
-
-    svg {
-      color: white;
+  .yt-link img {
+      position: absolute;
+      color: black;
+      z-index: 2;
+      right: 6px;
+      bottom: 13px;
+      cursor: pointer;
       width: 2.5rem;
-      height: 2.5rem;
-    }
   }
 
   @media (max-width: 576px) {
-    .yt-link {
-      width: 2rem;
-      height: 2rem;
-      right: 1rem;
-      bottom: 1rem;
+    .yt-link img {
+      width: 1.5rem;
+      right: 6px;
+      bottom: 10px;
     }
   }
 }
@@ -148,4 +137,8 @@ pre {
       margin-bottom: 1rem;
     }
   }
+}
+
+.invisible {
+  display: none;
 }

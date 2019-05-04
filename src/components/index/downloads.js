@@ -9,7 +9,7 @@ const Downloads = () => (
     <Row>
       <Col sm>
         <Image
-          src="Database-icon-min.png"
+          fileName="Database-icon-min.png"
           label="Data"
           link="/"
           wrapperClass="icon"
@@ -17,7 +17,7 @@ const Downloads = () => (
       </Col>
       <Col sm>
         <Image
-          src="GitHub-min.png"
+          fileName="GitHub-min.png"
           label="Code" link="/"
           wrapperClass="icon"
         />

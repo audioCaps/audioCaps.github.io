@@ -1,12 +1,16 @@
 import React from "react"
 
-const Image = ({ src, link, wrapperClass, label }) => (
+export const Image = ({ fileName }) => (
+  <img src={require(`../../images/${fileName}`)} alt={fileName} />
+)
+
+const ImageWithLabel = ({ fileName, link, wrapperClass, label }) => (
   <div className={`${wrapperClass} image`}>
     <a href={link}>
-      <img src={require(`../../images/${src}`)} alt={label} />
+      <Image fileName={fileName} />
       <div className="label">{label}</div>
     </a>
   </div>
 )
 
-export default Image
+export default ImageWithLabel
