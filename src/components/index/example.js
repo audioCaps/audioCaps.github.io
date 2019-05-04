@@ -51,10 +51,20 @@ class Example extends React.Component {
       <div id="example" className="container mb-5">
         <div className="title">
           <h2>Examples</h2>
-          <ToggleInput
-            toggle={this.toggleVisible}
-          />
         </div>
+        <Row>
+          <Col
+            className='flex'
+            style={{justifyContent: 'flex-end', marginBottom: '1rem'}}
+            md={{ span: 10, offset: 1 }}>
+            <div className="toggleWrapper">
+              <span>Video</span>
+              <ToggleInput
+                toggle={this.toggleVisible}
+              />
+            </div>
+          </Col>
+        </Row>
         <Row>
           <Col md={{ span: 10, offset: 1 }}>
             <Ytplayer video={VIDEOS[active]} visible={visible}/>

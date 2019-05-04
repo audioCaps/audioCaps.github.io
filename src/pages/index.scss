@@ -20,6 +20,10 @@ pre {
   margin-top: 64px;
 }
 
+.flex {
+  display: flex;
+}
+
 #progress {
   width: 1000%;
   height: 30px;
@@ -31,34 +35,35 @@ pre {
 }
 
 #example {
-  .title {
-    display: flex;
-    margin-bottom: 3rem;
-  }
-
   h2 {
     margin-bottom: 0;
-    margin-right: 1rem;
+  }
+
+  .toggleWrapper {
+    width: max-content;
+    text-align: center;
+    justify-content: flex-end;
+    color: #999999;
   }
 
   .video button {
-      height: 30px;
+    height: 30px;
   }
 
-  .title svg {
-      width: 1.25rem;
-      height: 1.25rem;
-      margin-right: 0.2rem;
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.2rem;
   }
 
   .yt-link img {
-      position: absolute;
-      color: black;
-      z-index: 2;
-      right: 6px;
-      bottom: 13px;
-      cursor: pointer;
-      width: 2.5rem;
+    position: absolute;
+    color: black;
+    z-index: 2;
+    right: 6px;
+    bottom: 13px;
+    cursor: pointer;
+    width: 2.5rem;
   }
 
   @media (max-width: 576px) {
