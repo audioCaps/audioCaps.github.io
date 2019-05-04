@@ -1,8 +1,7 @@
 import React from "react"
 import ReactPlayer from "react-player"
-import ProgressBar from "react-bootstrap/ProgressBar"
-import { MdPlayArrow, MdPause } from "react-icons/md"
 import Caption from "./caption"
+import VideoControl from "./videoControl"
 import { Image } from "./image"
 
 class Ytplayer extends React.Component {
@@ -65,30 +64,13 @@ class Ytplayer extends React.Component {
     return (
       <div className="video">
         <Caption visible={visible} video={video} />
-        <div className="btn-group d-flex" role="group">
-          {playing ? (
-            <button
-              type="button"
-              className="btn btn-sm btn-warning w-100"
-              onClick={this.pause}
-            >
-              <MdPause />
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="btn btn-sm btn-success w-100"
-              onClick={this.play}
-            >
-              <MdPlayArrow />
-            </button>
-          )}
-          <ProgressBar
-            id="progress"
-            // To show full progress bar
-            now={(playedSeconds / (video.duration - 1)) * 100}
-          />
-        </div>
+        <VideoControl
+          playing={playing}
+          pauseFunc={this.pause}
+          playFunc={this.play}
+          // To show full progress bar despite update delays
+          progressInPercent={(playedSeconds / (video.duration - 1)) * 100}
+        />
         <div style={{position: "relative"}}>
           <ReactPlayer
             ref={this.ref}
