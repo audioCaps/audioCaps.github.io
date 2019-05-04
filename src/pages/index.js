@@ -4,7 +4,7 @@ import "./index.scss"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import TopNav from "../components/index/top_nav"
+import TopNav from "../components/index/topNav"
 import Intro from "../components/index/intro"
 import About from "../components/index/about"
 import Example from "../components/index/example"
