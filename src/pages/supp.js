@@ -7,6 +7,13 @@ import "./supp.scss"
 
 const VIDEOS = [
   {
+    id: "fGGYeXR_LS8",
+    startSeconds: 30,
+    Ours: "a man speaking with a series of whistling in the background",
+    GT:
+      "a man talking as another person whistles while water trickles on a hard surface in the background",
+  },
+  {
     id: "6BJ455B1aAs",
     startSeconds: 0,
     Ours: "a large explosion followed by a loud pop",
@@ -16,8 +23,8 @@ const VIDEOS = [
     id: "31WGUPOYS5g",
     startSeconds: 22,
     Ours:
-      "a small motor is running , whirring occurs , and a high - pitched whine is present",
-    GT: "a drone whirring followed by a crashing sound",
+      "a truck engine is running, a siren is occurring, and an adult male speaks",
+    GT: "a child shouts, and adult male speaks, and an emergency vehicle siren sounds and the horn blows",
   },
   {
     id: "EzWEO2WD_MM",
@@ -32,13 +39,6 @@ const VIDEOS = [
     Ours: "a man and woman talking , then a baby crying",
     GT:
       "a kid crying as a man and a woman talk followed by a car door opening then closing",
-  },
-  {
-    id: "fGGYeXR_LS8",
-    startSeconds: 30,
-    Ours: "a man speaking with a series of whistling in the background",
-    GT:
-      "a man talking as another person whistles while water trickles on a hard surface in the background",
   },
   {
     id: "hJtOGmN_KVw",
